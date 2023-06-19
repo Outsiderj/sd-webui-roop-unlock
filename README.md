@@ -1,5 +1,5 @@
 # roop-unlock for StableDiffusion
-[My telegram channel]([AUTOMATIC1111 web-ui](https://github.com/AUTOMATIC1111/stable-diffusion-webui/) with portable versions of popular and interesting neural networks
+[My telegram channel](https://t.me/neurogen_news) with portable versions of popular and interesting neural networks
 
 
 Original info:
