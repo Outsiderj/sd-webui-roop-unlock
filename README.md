@@ -1,5 +1,6 @@
 # roop-unlock for StableDiffusion
 ENG: [My telegram channel](https://t.me/neurogen_news) with portable versions of popular and interesting neural networks
+
 RU: [Мой телеграм канал](https://t.me/neurogen_news) с портативными версиями популярных и интересных нейронок.
 Пару слов о форке:
 - Убрана цензура
