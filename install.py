@@ -25,9 +25,8 @@ if not os.path.exists(model_path):
     download(model_url, model_path)
 
 print("Checking roop requirements")
-whl_dir = os.path.abspath("whl")
 launch.run_pip(
-    f"install {whl_dir}/insightface-0.7.3-cp310-cp310-win_amd64.whl"
+    f"install extensions/sd-webui-roop-unlock/insightface-0.7.3-cp310-cp310-win_amd64.whl"
 )
 with open(req_file) as file:
     for package in file:
