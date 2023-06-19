@@ -7,7 +7,7 @@ import urllib.request
 
 req_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), "requirements.txt")
 
-models_dir = os.path.abspath("models/roop")
+models_dir = os.path.abspath("models")
 model_url = "https://huggingface.co/henryruhs/roop/resolve/main/inswapper_128.onnx"
 model_name = os.path.basename(model_url)
 model_path = os.path.join(models_dir, model_name)
@@ -25,6 +25,7 @@ if not os.path.exists(model_path):
     download(model_url, model_path)
 
 print("Checking roop requirements")
+launch.run_pip(f"install insightface-0.7.3-cp310-cp310-win_amd64.whl")
 with open(req_file) as file:
     for package in file:
         try:

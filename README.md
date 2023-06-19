@@ -1,12 +1,3 @@
-# roop-unlock for StableDiffusion
-ENG: [My telegram channel](https://t.me/neurogen_news) with portable versions of popular and interesting neural networks
-
-RU: [Мой телеграм канал](https://t.me/neurogen_news) с портативными версиями популярных и интересных нейронок.
-Пару слов о форке:
-- Убрана цензура
-- Небольшие фиксы
-
-Original info:
 # roop for StableDiffusion
 
 This is an extension for StableDiffusion's [AUTOMATIC1111 web-ui](https://github.com/AUTOMATIC1111/stable-diffusion-webui/) that allows face-replacement in images. It is based on [roop](https://github.com/s0md3v/roop) but will be developed seperately.
