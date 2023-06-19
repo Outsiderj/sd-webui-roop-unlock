@@ -1,3 +1,10 @@
+# roop for StableDiffusion - version without nsfw lock
+
+My telegram channel with extensions and portable versions of popular and useful neural networks: https://t.me/neurogen_news
+
+RU: В данной версии расширения, убрана блокировка NSFW контента.
+Мой телеграм канал с расширениями и портативынми версиями популярных и полезных нейронок: https://t.me/neurogen_news
+
 # roop for StableDiffusion
 
 This is an extension for StableDiffusion's [AUTOMATIC1111 web-ui](https://github.com/AUTOMATIC1111/stable-diffusion-webui/) that allows face-replacement in images. It is based on [roop](https://github.com/s0md3v/roop) but will be developed seperately.
