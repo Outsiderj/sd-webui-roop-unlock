@@ -1,5 +1,5 @@
-./
 onnx
 onnxruntime
 opencv-python==4.7.0.72
 cython
+https://github.com/Em1tSan/sd-webui-roop-unlock/raw/main/insightface-0.7.3-cp310-cp310-win_amd64.whl
