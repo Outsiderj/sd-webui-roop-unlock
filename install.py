@@ -14,31 +14,18 @@ model_path = os.path.join(models_dir, model_name)
 
 def install_package(package):
     try:
-        python = sys.executable
         package = package.strip()
 
-        if not launch.is_installed(package):
-            print(f"Install {package}")
-            launch.run_pip(
-                f"install {package}", f"sd-webui-roop requirement: {package}"
-            )
-        elif "==" in package:
-            package_name, package_version = package.split("==")
-            installed_version = pkg_resources.get_distribution(package_name).version
-            if installed_version != package_version:
-                print(
-                    f"Install {package}, {installed_version} vs {package_version}"
-                )
-                launch.run_pip(
-                    f"install {package}",
-                    f"sd-webui-roop requirement: changing {package_name} version from {installed_version} to {package_version}",
-                )
+        # Using os.system to run the pip install command with sudo
+        install_command = f"sudo pip install {package}"
+        os.system(install_command)
 
     except Exception as e:
         print(e)
         print(f"Warning: Failed to install {package}, roop will not work.")
         raise e
 
+# Example usage:
 insightface_package = "insightface==0.7.3"
 install_package(insightface_package)
 
