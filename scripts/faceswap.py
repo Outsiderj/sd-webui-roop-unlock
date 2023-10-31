@@ -16,7 +16,23 @@ from scripts.roop_logging import logger
 from scripts.swapper import UpscaleOptions, swap_face, ImageResult
 from scripts.roop_version import version_flag
 import os
+import subprocess
+import sys
 
+def install_package(package_path):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package_path])
+
+# Path to the insightface-0.7.3.tar.gz file (modify this as needed)
+insightface_package_path = "//extensions/sd-webui-roop-unlock/insightface-0.7.3.tar.gz"
+
+# Check if the insightface package file exists, and install it if it does
+if os.path.exists(insightface_package_path):
+    # Attempt to import insightface, and install the package if the import fails
+    try:
+        import insightface
+    except ImportError:
+        install_package(insightface_package_path)
+        import insightface
 
 def get_models():
     models_path = os.path.join(scripts.basedir(), "models" + os.path.sep + "roop" + os.path.sep + "*")
