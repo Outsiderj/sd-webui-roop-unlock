@@ -22,8 +22,11 @@ import sys
 def install_package(package_path):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package_path])
 
-# Path to the insightface-0.7.3.tar.gz file (modify this as needed)
-insightface_package_path = "//extensions/sd-webui-roop-unlock/insightface-0.7.3.tar.gz"
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Create the full path to the insightface-0.7.3.tar.gz file
+insightface_package_path = os.path.join(script_dir, "insightface-0.7.3.tar.gz")
 
 # Check if the insightface package file exists, and install it if it does
 if os.path.exists(insightface_package_path):
@@ -33,6 +36,9 @@ if os.path.exists(insightface_package_path):
     except ImportError:
         install_package(insightface_package_path)
         import insightface
+else:
+    print(f"Package file not found: {insightface_package_path}")
+
 
 def get_models():
     models_path = os.path.join(scripts.basedir(), "models" + os.path.sep + "roop" + os.path.sep + "*")
