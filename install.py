@@ -14,8 +14,8 @@ model_path = os.path.join(models_dir, model_name)
 
 def install_insightface():
     try:
-        # Define the path to the local package
-        package_path = "other/insightface-0.7.3.tar.gz"  
+        # Define the path to the local package in the current directory
+        package_path = "./insightface-0.7.3.tar.gz"  
         
         # Install the package from the local file
         os.system(f"pip install {package_path}")
@@ -24,9 +24,6 @@ def install_insightface():
         print(e)
         print("Warning: Failed to install insightface==0.7.3, roop will not work.")
         raise e
-
-# Calling the function to install insightface==0.7.3 from the local file
-install_insightface()
 
 def download(url, path):
     request = urllib.request.urlopen(url)
