@@ -12,22 +12,17 @@ model_url = "https://huggingface.co/henryruhs/roop/resolve/main/inswapper_128.on
 model_name = os.path.basename(model_url)
 model_path = os.path.join(models_dir, model_name)
 
-def install_package(package):
+def install_insightface():
     try:
-        package = package.strip()
-
         # Using os.system to run the pip install command with sudo
-        install_command = f"sudo pip install {package}"
-        os.system(install_command)
-
+        os.system("sudo -H pip install insightface==0.7.3")
     except Exception as e:
         print(e)
-        print(f"Warning: Failed to install {package}, roop will not work.")
+        print("Warning: Failed to install insightface==0.7.3, roop will not work.")
         raise e
 
-# Example usage:
-insightface_package = "insightface==0.7.3"
-install_package(insightface_package)
+# Calling the function to install insightface==0.7.3
+install_insightface()
 
 def download(url, path):
     request = urllib.request.urlopen(url)
